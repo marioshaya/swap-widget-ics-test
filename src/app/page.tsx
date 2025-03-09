@@ -28,7 +28,12 @@ export default function Home() {
 				easily integrate it to your UI.
 			</p>
 			<table className="table-auto border-collapse border border-white/25 border-spacing-2 bg- backdrop-blur-lg">
-				<thead>
+				<thead
+					className="font-bold py-2"
+					style={{
+						backgroundColor: `#${mainColor}`,
+					}}
+				>
 					<tr>
 						<th>Params</th>
 						<th>Value</th>

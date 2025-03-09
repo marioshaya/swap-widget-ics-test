@@ -29,6 +29,10 @@ table {
   @apply text-sm border rounded-2xl 
 }
 
+tr, td, th {
+  border: 1px solid rgba(245,245,245,0.5);
+  padding: 12px;
+}
 ul {
   @apply list-disc list-inside
 }
