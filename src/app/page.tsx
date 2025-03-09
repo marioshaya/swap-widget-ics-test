@@ -1,16 +1,33 @@
+"use client"
+
 import Link from "next/link"
+import { CSSProperties, useEffect, useState } from "react"
 
 export default function Home() {
+	const [mainColor, setMainColor] = useState<string>("f8567f")
+
+	useEffect(() => {})
+
 	return (
-		<main className="px-4">
+		<main
+			className="px-4"
+			style={{ "--tw-primary-color": `#${mainColor}` } as CSSProperties}
+		>
 			<h1 className="font-black text-3xl py-8 px-4 text-white/75">
-				<span className="text-[#de00a1]">IceCreamSwap</span> Widget Tool
+				<span
+					style={{
+						color: `#${mainColor}`,
+					}}
+				>
+					IceCreamSwap
+				</span>{" "}
+				Widget Tool
 			</h1>
 			<p>
 				This is an example on how to use the IceCreamSwap&apos;s swap widget and
 				easily integrate it to your UI.
 			</p>
-			<table className="table-auto border-collapse border border-white/25 border-spacing-2">
+			<table className="table-auto border-collapse border border-white/25 border-spacing-2 bg- backdrop-blur-lg">
 				<thead>
 					<tr>
 						<th>Params</th>
@@ -43,11 +60,14 @@ export default function Home() {
 						<td>chain</td>
 						<td>
 							chainId <br />
-							All chains supported are listed
+							All supported chains are listed{" "}
 							<Link
-								className="decoration-underline text-[#de00a380] hover:text-[#de00a1] transition-colors duration-300 ease-in-out"
+								className="decoration-underline transition-colors duration-300 ease-in-out"
 								href="https://github.com/IceCreamSwapCom/IceCreamSwapUi/tree/IceCreamSwapV3/packages/constants/src/chains"
 								target="_blank"
+								style={{
+									color: `#${mainColor}`,
+								}}
 							>
 								here
 							</Link>
@@ -70,9 +90,26 @@ export default function Home() {
 					</tr>
 				</tbody>
 			</table>
+			{/* Playground */}
+			<div className="flex items-center gap-x-4">
+				<button
+					onClick={() => setMainColor("00bba7")}
+					className="bg-teal-500 px-6 py-2 rounded-xl font-semibold"
+					type="button"
+				>
+					Teal
+				</button>
+				<button
+					onClick={() => setMainColor("7ccf00")}
+					className="bg-lime-500 px-6 py-2 rounded-xl font-semibold"
+					type="button"
+				>
+					Lime
+				</button>
+			</div>
 			<div className="flex flex-row justify-between">
 				<iframe
-					src="https://swap-widget-one.vercel.app/?theme=light&color=de00a1&chain=1116&inputCurrency=0xc0E49f8C615d3d4c245970F6Dc528E4A47d69a44&outputCurrency=0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1"
+					src={`https://swap-widget-one.vercel.app/?theme=light&color=${mainColor}&chain=1116&inputCurrency=0xc0E49f8C615d3d4c245970F6Dc528E4A47d69a44&outputCurrency=0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1`}
 					width="480"
 					height="720"
 				></iframe>
