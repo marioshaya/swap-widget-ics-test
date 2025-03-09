@@ -10,7 +10,7 @@ export default function Home() {
 
 	return (
 		<main
-			className="px-4 text-white/75"
+			className="flex flex-col gap-y-4 px-4 text-white/75"
 			style={{ "--tw-primary-color": `#${mainColor}` } as CSSProperties}
 		>
 			<h1 className="font-black text-3xl py-8 px-4 text-white/75">
@@ -96,21 +96,24 @@ export default function Home() {
 				</tbody>
 			</table>
 			{/* Playground */}
-			<div className="flex items-center gap-x-4">
-				<button
-					onClick={() => setMainColor("00bba7")}
-					className="bg-teal-500 px-6 py-2 rounded-xl font-semibold"
-					type="button"
-				>
-					Teal
-				</button>
-				<button
-					onClick={() => setMainColor("7ccf00")}
-					className="bg-lime-500 px-6 py-2 rounded-xl font-semibold"
-					type="button"
-				>
-					Lime
-				</button>
+			<div className="flex flex-col gap-2">
+				<div className="font-bold text-xl uppercase">Playground</div>
+				<div className="flex items-center gap-x-4">
+					<button
+						onClick={() => setMainColor("00bba7")}
+						className="bg-teal-500 px-6 py-2 rounded-xl font-semibold"
+						type="button"
+					>
+						Teal
+					</button>
+					<button
+						onClick={() => setMainColor("7ccf00")}
+						className="bg-lime-500 px-6 py-2 rounded-xl font-semibold"
+						type="button"
+					>
+						Lime
+					</button>
+				</div>
 			</div>
 			<div className="flex flex-row justify-between">
 				<iframe
