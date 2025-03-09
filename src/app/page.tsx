@@ -10,7 +10,7 @@ export default function Home() {
 
 	return (
 		<main
-			className="px-4"
+			className="px-4 text-white/75"
 			style={{ "--tw-primary-color": `#${mainColor}` } as CSSProperties}
 		>
 			<h1 className="font-black text-3xl py-8 px-4 text-white/75">
