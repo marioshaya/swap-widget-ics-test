@@ -33,7 +33,9 @@ export default function Home() {
 					</tr>
 					<tr>
 						<td>color</td>
-						<td>hex color code without "#"</td>
+						<td>
+							hex color code without &quot;<b>#</b>&quot;
+						</td>
 						<td>f8567f</td>
 						<td>string</td>
 					</tr>
