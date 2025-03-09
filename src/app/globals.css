@@ -26,9 +26,7 @@ body {
 }
 
 table {
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	overflow: hidden;
+	border: 1px solid rgba(245, 245, 245, 0.5);
 }
 
 tr,
