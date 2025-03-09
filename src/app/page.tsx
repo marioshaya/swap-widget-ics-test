@@ -7,7 +7,7 @@ export default function Home() {
 				<span className="text-[#de00a1]">IceCreamSwap</span> Widget Tool
 			</h1>
 			<p>
-				This is an example on how to use the IceCreamSwap's swap widget and
+				This is an example on how to use the IceCreamSwap&apos;s swap widget and
 				easily integrate it to your UI.
 			</p>
 			<table className="table-auto border-collapse border border-white/25 border-spacing-2">
