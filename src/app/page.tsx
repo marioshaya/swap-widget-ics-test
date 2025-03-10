@@ -1,12 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import { CSSProperties, useEffect, useState } from "react"
+import { CSSProperties, useState } from "react"
 
 export default function Home() {
   const [mainColor, setMainColor] = useState<string>("f8567f")
-
-  useEffect(() => {})
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   return (
     <main
@@ -114,10 +113,21 @@ export default function Home() {
             Lime
           </button>
         </div>
+        <div className="flex items-center gap-x-4">
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="px-6 rounded-xl font-semibold"
+            type="button"
+          >
+            {isDarkMode ? "Dark" : "Light"}
+          </button>
+        </div>
       </div>
       <div className="flex flex-row justify-between">
         <iframe
-          src={`https://swap-widget-one.vercel.app/?theme=light&color=${mainColor}&chain=1116&inputCurrency=0xc0E49f8C615d3d4c245970F6Dc528E4A47d69a44&outputCurrency=0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1`}
+          src={`https://swap-widget-one.vercel.app/?theme=${
+            isDarkMode ? "dark" : "light"
+          }&color=${mainColor}&chain=1116&inputCurrency=0xc0E49f8C615d3d4c245970F6Dc528E4A47d69a44&outputCurrency=0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1`}
           width="480"
           height="720"
         ></iframe>
