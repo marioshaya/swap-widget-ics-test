@@ -16,10 +16,10 @@ export default function Home() {
 
   return (
     <main
-      className="flex flex-col gap-y-4 px-4 text-white/75"
+      className="h-screen flex flex-col gap-y-2 px-4 text-white/75"
       style={{ "--tw-primary-color": `#${mainColor}` } as CSSProperties}
     >
-      <h1 className="font-black text-3xl py-8 px-4 text-white/75">
+      <h1 className="font-black text-3xl py-4 text-white/75">
         <span
           style={{
             color: `#${mainColor}`
@@ -149,7 +149,7 @@ export default function Home() {
             isDarkMode ? "dark" : "light"
           }&color=${mainColor}&chain=1116&inputCurrency=0xc0E49f8C615d3d4c245970F6Dc528E4A47d69a44&outputCurrency=0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1`}
           width="480"
-          height="720"
+          height="600"
         ></iframe>
       </div>
     </main>
