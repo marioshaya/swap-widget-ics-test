@@ -107,22 +107,22 @@ export default function Home() {
         <div className="flex items-center gap-x-4">
           <button
             onClick={() => setMainColor("00bba7")}
-            className="bg-teal-500 px-6 py-2 rounded-xl font-semibold"
+            className="bg-teal-500"
             type="button"
           >
             Teal
           </button>
           <button
             onClick={() => setMainColor("7ccf00")}
-            className="bg-lime-500 px-6 py-2 rounded-xl font-semibold"
+            className="bg-lime-500"
             type="button"
           >
             Lime
           </button>
           <div className="rounded-xl border border-white/25 text-white/50 relative">
-            <span className="absolute top-[22%] left-2.5">#</span>
+            <span className="absolute top-[22%] left-5">#</span>
             <input
-              className="w-32 px-6 py-2 outline-none"
+              className="w-32 px-6 py-2 rounded-xl outline-none text-center"
               value={mainColor}
               maxLength={6}
               onChange={handleChange}
@@ -133,7 +133,7 @@ export default function Home() {
         <div className="flex items-center gap-x-4">
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="px-6 py-2 rounded-xl font-semibold"
+            // className=""
             style={{
               border: `1px solid #${mainColor}`,
               color: `#${mainColor}`
