@@ -133,7 +133,6 @@ export default function Home() {
         <div className="flex items-center gap-x-4">
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            // className=""
             style={{
               border: `1px solid #${mainColor}`,
               color: `#${mainColor}`
@@ -144,7 +143,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="flex flex-row justify-between">
+      <div className="w-full flex justify-center">
         <iframe
           src={`https://swap-widget-one.vercel.app/?theme=${
             isDarkMode ? "dark" : "light"
