@@ -7,6 +7,13 @@ export default function Home() {
   const [mainColor, setMainColor] = useState<string>("f8567f")
   const [isDarkMode, setIsDarkMode] = useState(false)
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/[^0-9a-fA-F]/g, "")
+    value = value.slice(0, 6)
+
+    setMainColor(value)
+  }
+
   return (
     <main
       className="flex flex-col gap-y-4 px-4 text-white/75"
@@ -112,11 +119,25 @@ export default function Home() {
           >
             Lime
           </button>
+          <div className="rounded-xl border border-white/25 text-white/50 relative">
+            <span className="absolute top-[22%] left-2.5">#</span>
+            <input
+              className="w-32 px-6 py-2 outline-none"
+              value={mainColor}
+              maxLength={6}
+              onChange={handleChange}
+              type="text"
+            />
+          </div>
         </div>
         <div className="flex items-center gap-x-4">
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="px-6 rounded-xl font-semibold"
+            className="px-6 py-2 rounded-xl font-semibold"
+            style={{
+              border: `1px solid #${mainColor}`,
+              color: `#${mainColor}`
+            }}
             type="button"
           >
             {isDarkMode ? "Dark" : "Light"}
